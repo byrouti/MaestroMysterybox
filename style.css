@@ -44,42 +44,24 @@ body {
     color: #ffffff;
   }
 
-
-  .contact-button {
-    background: #FFD700;
-    color: #1e3c72;
-    padding: 15px 30px;
-    border-radius: 50px;
-    text-decoration: none;
+  .claim-button {
+    background-color: #FFD700; /* Gold color */
+    color: #000;
+    font-size: 18px;
     font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
     display: inline-block;
-    margin-top: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
 }
 
-.contact-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
-}
-
-@keyframes glow {
-    from {
-        text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700;
-    }
-
-    to {
-        text-shadow: 0 0 20px #FFD700, 0 0 30px #FFD700;
-    }
-}
-
-@keyframes prizeglow {
-    from {
-        box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-    }
-
-    to {
-        box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
-    }
+.claim-button:hover {
+    background-color: #FFC107; /* Slightly darker yellow */
+    transform: scale(1.05);
 }
 
 
