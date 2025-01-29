@@ -11,9 +11,9 @@ function getRandomPrize() {
         "9 Maestro premium account for 1 day",
         "10 Maestro premium account for 1 day"
     ];
-
+    
     const randomPrize = prizes[Math.floor(Math.random() * prizes.length)];
     document.getElementById("prize").textContent = randomPrize;
 }
-
+  
 window.onload = getRandomPrize;
