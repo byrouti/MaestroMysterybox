@@ -43,32 +43,23 @@ body {
     background: #2575fc;
     color: #ffffff;
   }
-
+  
   .claim-button {
-    background-color: #FFD700; /* Gold color */
+    background-color: #c8db19; /* Gold color */
     color: #000;
     font-size: 18px;
     font-weight: bold;
     padding: 15px 30px;
     border: none;
-    border-radius: 10px;
+    border-radius: 40px;
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
     display: inline-block;
     text-align: center;
-}
-
-.claim-button:hover {
+  }
+  
+  .claim-button:hover {
     background-color: #FFC107; /* Slightly darker yellow */
     transform: scale(1.05);
-}
-
-
-
-
-
-
-
-
-
+  }
