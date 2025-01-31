@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function handleClick() {
         // Get token and prize from URL parameters
     
-        console.log(token)
         const urlParams = new URLSearchParams(window.location.search);
         const token = urlParams.get("token");
         console.log(token)
