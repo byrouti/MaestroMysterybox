@@ -1,4 +1,50 @@
+document.addEventListener("DOMContentLoaded", function () {
+    function handleClick() {
+        // Get token and prize from URL parameters
+    
+        console.log(token)
+        const urlParams = new URLSearchParams(window.location.search);
+        const token = urlParams.get("token");
+        console.log(token)
+
+        const prize = urlParams.get("prize");
+
+        if (!token) {
+            alert("No token provided!");
+            return;
+        }
+
+        // Get used tokens from localStorage
+        let usedTokens = JSON.parse(localStorage.getItem("usedTokens")) || [];
+
+        if (usedTokens.includes(token)) {
+            // Token already used, show "already-clicked" div and hide "winner"
+            document.getElementById("winner").style.display = "none";
+            document.getElementById("already-clicked").style.display = "block";
+        } else {
+            // Store token in localStorage
+            usedTokens.push(token);
+            localStorage.setItem("usedTokens", JSON.stringify(usedTokens));
+
+            // Show the prize
+            document.getElementById("prize").textContent = prize ? decodeURIComponent(prize) : "Unknown Prize";
+
+            // Show "winner" div, hide "already-clicked"
+            document.getElementById("winner").style.display = "block";
+            document.getElementById("already-clicked").style.display = "none";
+        }
+    }
+
+    handleClick();  // Run on page load
+});
+
+
+
+
+
+
 function getRandomPrize() {
+    
     const prizes = [
         "1 Maestro premium account for 1 month",
         "2 Maestro premium account for 1 week",
